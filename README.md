@@ -1,4 +1,4 @@
-<h1 align="center"> <img src="Img-Src/Readme-Logo.svg" alt="Avatar-Logo" width=80px" height="80px"> </h1>
+<h1 align="center"> <img src="image/Readme-Logo.svg" alt="Avatar-Logo" width=80px" height="80px"> </h1>
 
 ### 🔁 How it works:
   
