@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar Generator</title>
+    <link rel="icon" href="./image/Logo.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="header">Avatar Generator</h1>
+        <div class="gen">
+            <div class="input-wrapper gen ">
+                <input id="name" class="inpbox gen" type="text" placeholder="Your name">
+                <button class="generate zoom" onclick="invokeFunc()">Generate</button>
+            </div>
+        </div>
+        <div>
+            <div class="avatar zoom">
+                <img src="https://avatars.dicebear.com/api/male/gopi.svg?mood[]=happy" id="avatar" height="200"
+                    width="200" alt="Sorry, no avatar found 😄">
+                <div class="usrinfo">
+                    <h2 id="usrname">Name : Steve</h2>
+                    <h2 id="gender"> Gender: Male</h2>
+                </div>
+                <a href="https://avatars.dicebear.com/api/male/gopi.svg?mood[]=happy" id="imgsrc" class="imgsrc">Download</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
