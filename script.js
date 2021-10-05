@@ -8,20 +8,26 @@ async function fetchGender(userName) {
         return gender;
     } 
     catch (error) {
-        console.error(error);
+        console.log(error);
     }
 }
   
 // Generate avatar  
 async function generateAvatar(userName) {
     const response = await fetchGender(userName);
-    var apiUrl = `https://avatars.dicebear.com/api/${response.gender}/${userName}.svg?b=%235e728d&r=10?mood[]=happy`
-    document.getElementById("avatar").src = apiUrl;
-    document.getElementById("usrname").innerHTML = `Name: ${userName}`;
-    document.getElementById("gender").innerHTML = `Gender: ${response.gender}`;
-    document.getElementById("imgsrc").href = apiUrl;
+    var avatar = document.getElementById("avatar");
+    var downloadLink = document.getElementById("imgsrc");
+    var apiUrl = `https://avatars.dicebear.com/api/${response.gender}/${userName}.svg?b=%235e728d&r=10?mood[]=happy`;
+    avatar.src = apiUrl;
+    document.getElementById("usrname").textContent = `Name: ${userName}`;
+    document.getElementById("gender").textContent = `Gender: ${response.gender}`;
+    downloadLink.href = apiUrl;
+    downloadLink.style.display="inherit";
+    avatar.onerror = function () {
+      downloadLink.style.display = "none";      
+    };
     userInput.value="";
-  }
+} 
 
 // invokes driver function  
 function invokeFunc() {
