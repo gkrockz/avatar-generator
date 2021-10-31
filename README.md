@@ -12,7 +12,7 @@
   
 ---
 
-> **Latest Bug Fix 🐞:** Fixed download button for invalid user names.
+> **Latest Bug Fix 🐞:** Fixed formatting for invalid names.
 
 > **Note:** Avatars are generated based on letter sequencing, So make sure that spaces aren't included after your name.
 
