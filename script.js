@@ -37,13 +37,9 @@ async function generateAvatar(userName) {
 
 // invokes driver function  
 function invokeFunc() {
-    if(userInput.value === "") {
-      alert("oops, you forgot to enter your name !");
-    }
-    else {
-      userInput.value.length > 2 ? generateAvatar(userInput.value.toLowerCase()) : alert("please enter a valid name !");
-    }
-  }
+  var regex = /^([a-zA-Z]+){3,10}$/;
+  (regex.test(userInput.value) === false) ? alert("please enter a valid name !") : generateAvatar(userInput.value.toLowerCase());
+}
 
 function EventForKeyPress(event) {
   if (event.keyCode === 13) {
