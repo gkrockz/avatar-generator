@@ -11,9 +11,7 @@
   
   
 ---
-
-> **Latest Bug Fix 🐞:** Fixed formatting for invalid names.
-
+> **Latest Bug Fix 🐞:** Added regex validation for input field.
+>
 > **Note:** Avatars are generated based on letter sequencing, So make sure that spaces aren't included after your name.
-
 ---
