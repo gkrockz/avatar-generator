@@ -16,13 +16,12 @@ async function fetchGender(userName) {
 }
   
 async function generateAvatar(userName) {
-    
     const response = await fetchGender(userName); 
     avatar.style.display = "initial";
-    var apiUrl = `https://avatars.dicebear.com/api/${response.gender}/${userName}.svg?b=%235e728d&r=10?mood[]=happy`;
+    var apiUrl = `https://avatars.dicebear.com/api/personas/${userName}.svg?mood[]=happy`;
     avatar.src = apiUrl;
     usrname.textContent = `Name: ${userName}`;
-    gender.textContent = `Gender: ${response.gender}`;
+    gender.textContent = response.gender?`Gender: ${response.gender}`:"Gender: Unknown";
     downloadLink.href = apiUrl;
     downloadLink.style.display="inherit";
 
@@ -35,7 +34,6 @@ async function generateAvatar(userName) {
     userInput.value="";
   }
 
-// invokes driver function  
 function invokeFunc() {
   var regex = /^([a-zA-Z]+){3,10}$/;
   (regex.test(userInput.value) === false) ? alert("please enter a valid name !") : generateAvatar(userInput.value.toLowerCase());
